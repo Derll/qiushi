@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>求士</title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <h1 class="mui-title">求士</h1>
+	</header>
+	<div class="mui-content">
+	<div class="mui-slider">
+		<div class="mui-slider-group mui-slider-loop">
+			<!--支持循环，需要重复图片节点-->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#"><img src="images/4.jpg" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/1.jpg" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/2.jpg" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/3.jpg" /></a>
+			</div>
+			<div class="mui-slider-item">
+				<a href="#"><img src="images/4.jpg" /></a>
+			</div>
+			<!--支持循环，需要重复图片节点-->
+			<div class="mui-slider-item mui-slider-item-duplicate">
+				<a href="#"><img src="images/1.jpg" /></a>
+			</div>
+		</div>
+	</div>
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="images/shuijiao.jpg">
+				<div class="mui-media-body">
+					张得翻
+					<p class='mui-ellipsis'>天使湾投资经理</p>
+				</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="images/muwu.jpg">
+				<div class="mui-media-body">
+					苏放水
+					<p class='mui-ellipsis'>众筹天团投资经理</p>
+				</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="images/cbd.jpg">
+				<div class="mui-media-body">
+					马德华
+					<p class='mui-ellipsis'>美式足球领队</p>
+				</div>
+			</a>
+		</li>
+		<li class="mui-table-view-cell mui-media">
+			<a href="javascript:;">
+				<img class="mui-media-object mui-pull-left" src="images/yuantiao.jpg">
+				<div class="mui-media-body">
+					焦作人
+					<p class='mui-ellipsis'>华谊天团项目部经理</p>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>
+<script>
+	var gallery = mui('.mui-slider');
+	gallery.slider({
+		interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+	});
+</script>
+</body>
+</html>
