@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require vendor/bootstrap.min
+//= require vendor/mui.min
 //= require turbolinks
 //= require_tree .
