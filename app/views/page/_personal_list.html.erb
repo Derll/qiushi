@@ -1,0 +1,11 @@
+<% personal.each do |i| %>
+	<li class="mui-table-view-cell mui-media">
+		<%= link_to "/detail" do %>
+		<img class="mui-media-object mui-pull-left" src="<%= image_url 'shuijiao.jpg' %>">
+		<div class="mui-media-body">
+			<%= i.name %>
+			<p class='mui-ellipsis'><%= i.title %></p>
+		</div>
+		<% end %>
+	</li>
+<% end %>

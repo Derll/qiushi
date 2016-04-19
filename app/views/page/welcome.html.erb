@@ -1,6 +1,11 @@
 	<header class="mui-bar mui-bar-nav">
 	    <h1 class="mui-title">求士</h1>
 	</header>
+	<nav class="mui-bar mui-bar-tab">
+		<div class="col-xs-1 col-xs-offset-4">
+			<button type="button" class="mui-btn mui-btn-success support">我的信息</button>
+		</div>
+	</nav>
 	<div class="mui-content">
 	<div class="mui-slider">
 		<div class="mui-slider-group mui-slider-loop">
@@ -27,42 +32,7 @@
 		</div>
 	</div>
 	<ul class="mui-table-view">
-		<li class="mui-table-view-cell mui-media">
-			<%= link_to "/detail" do %>
-				<img class="mui-media-object mui-pull-left" src="<%= image_url 'shuijiao.jpg' %>">
-				<div class="mui-media-body">
-					张得翻
-					<p class='mui-ellipsis'>天使湾投资经理</p>
-				</div>
-			<% end %>
-		</li>
-		<li class="mui-table-view-cell mui-media">
-			<%= link_to "/detail" do %>
-				<img class="mui-media-object mui-pull-left" src="<%= image_url 'muwu.jpg' %>">
-				<div class="mui-media-body">
-					苏放水
-					<p class='mui-ellipsis'>众筹天团投资经理</p>
-				</div>
-			<% end %>
-		</li>
-		<li class="mui-table-view-cell mui-media">
-			<%= link_to "/detail" do %>
-				<img class="mui-media-object mui-pull-left" src="<%= image_url 'cbd.jpg' %>">
-				<div class="mui-media-body">
-					马德华
-					<p class='mui-ellipsis'>美式足球领队</p>
-				</div>
-			<% end %>
-		</li>
-		<li class="mui-table-view-cell mui-media">
-			<%= link_to "/detail" do %>
-				<img class="mui-media-object mui-pull-left" src="<%= image_url 'yuantiao.jpg' %>">
-				<div class="mui-media-body">
-					焦作人
-					<p class='mui-ellipsis'>华谊天团项目部经理</p>
-				</div>
-			<% end %>
-		</li>
+		<%= render partial: 'personal_list', locals: { personal: @personal } %>
 	</ul>
 </div>
 <script>
