@@ -11,11 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160418090212) do
+ActiveRecord::Schema.define(version: 20160420021620) do
+
+  create_table "comments", force: true do |t|
+    t.text     "title"
+    t.text     "content"
+    t.string   "username"
+    t.integer  "guest_id"
+    t.integer  "bonus"
+    t.string   "timestamps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "guests", force: true do |t|
-    t.string "name"
-    t.string "title"
+    t.string  "name"
+    t.string  "title"
+    t.integer "question_num"
+    t.integer "experience"
+    t.integer "level"
+    t.integer "wealth"
+    t.string  "timestamps"
+  end
+
+  create_table "questions", force: true do |t|
+    t.text     "title"
+    t.text     "content"
+    t.string   "username"
+    t.integer  "comment_id"
+    t.string   "timestamps"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

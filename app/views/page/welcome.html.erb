@@ -1,10 +1,27 @@
+	<%= stylesheet_link_tag "application" %>
 	<header class="mui-bar mui-bar-nav">
 	    <h1 class="mui-title">求士</h1>
 	</header>
 	<nav class="mui-bar mui-bar-tab">
-		<div class="col-xs-1 col-xs-offset-4">
+		<!--<div class="col-xs-1 col-xs-offset-4">
 			<button type="button" class="mui-btn mui-btn-success support">我的信息</button>
-		</div>
+		</div>-->
+		<a class="mui-tab-item mui-active" href="#">
+			<span class="fa fa-home"></span>
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<%= link_to "/guests/new", :class => 'mui-tab-item' do %>
+			<span class="fa fa-legal"></span>
+			<span class="mui-tab-label">建站</span>
+		<% end %>
+		<a class="mui-tab-item" href="#">
+			<span class="fa fa-registered"></span>
+			<span class="mui-tab-label">注册</span>
+		</a>
+		<a class="mui-tab-item" href="#">
+			<span class="fa fa-child"></span>
+			<span class="mui-tab-label">登录</span>
+		</a>
 	</nav>
 	<div class="mui-content">
 	<div class="mui-slider">

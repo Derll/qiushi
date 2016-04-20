@@ -1,0 +1,59 @@
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+	    <h1 class="mui-title">大咖详情</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+		<!--<div class="col-xs-1 col-xs-offset-4">
+			<button type="button" class="mui-btn mui-btn-success support">我的信息</button>
+		</div>-->
+		<%= link_to guest_ask_path(@guest), :class => 'mui-tab-item'  do %>
+			<span class="fa fa-wechat"></span>
+			<span class="mui-tab-label">提问</span>
+		<% end %>
+		<%= link_to edit_guest_path(@guest), :class => 'mui-tab-item' do %>
+			<span class="fa fa-edit"></span>
+			<span class="mui-tab-label">编辑</span>
+		<% end %>
+		<%= link_to guest_path(@guest), method: :delete, data: {confirm: '你确定要删除嘛？'}, :class => 'mui-tab-item' do %>
+			<span class="fa fa-hand-lizard-o"></span>
+			<span class="mui-tab-label">删除</span>
+		<% end %>
+		<a class="mui-tab-item" href="#">
+			<span class="fa fa-group"></span>
+			<span class="mui-tab-label">我的</span>
+		</a>
+	</nav>
+	<div class="mui-slider">
+		<div class="mui-slider-group">
+			<div class="mui-slider-item">
+				<a href="#"><img src="<%= image_url '1.jpg' %>" /></a>
+				<p class	="mui-slider-title">
+					<%= @guest.name %>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="introduction">
+		<h5><%= @guest.title %></h5>
+	</div>
+	<ul class="mui-table-view">
+		<li class="mui-table-view-cell">
+			<div class="col-xs-8">回答问题总数：<%= @guest.question_num %></div>
+			<div class="col-xs-4">好评率98%</div>
+		</li>
+		<li class="mui-table-view-cell">
+			<div class="col-xs-7">段数：大咖<%= @guest.level %>段</div>
+			<div class="col-xs-5">经验：<%= @guest.experience %>/100</div>
+		</li>
+		<li class="mui-table-view-cell">
+			<div class="col-xs-8">获取财富：<%= @guest.wealth %>积分</div>
+			<div class="col-xs-4">2016-3-22</div>
+		</li>
+	</ul>
+	<div class="question">
+		问答项
+	</div>
+	<ul class="mui-table-view">
+		<%= render partial: 'shared/comment_box', locals: {comments: @comments} %>
+	</ul>
+	</div>

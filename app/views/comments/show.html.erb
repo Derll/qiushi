@@ -1,0 +1,60 @@
+<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" ></a>
+	    <h1 class="mui-title">问答详情</h1>
+</header>
+<div class="quesiton_box">
+	<div class="reply clearfix">
+		<div class="avatar">
+			<%= link_to '#' do %>
+			<%= image_tag '3.jpg', class: 'image-circle' %>
+			<% end %>
+		</div>
+		<div class="body">
+			<div class="title">
+			<%= @comment.title %>
+			</div>
+			<div class="heading">
+				<h5 class="name"><%= link_to @comment.username, "#" %></h5>
+				<span class="datetime">
+					<%= time_ago_in_words @comment.created_at %> ago
+				</span>
+			</div>
+			<%= @comment.content %>
+		</div>
+	</div>
+
+	<% @questions.each do |c| %>
+	<div class="reply clearfix">
+		<div class="avatar">
+			<%= link_to '#' do %>
+			<%= image_tag '3.jpg', class: 'image-circle' %>
+			<% end %>
+		</div>
+		<div class="body">
+			<div class="heading">
+				<h5 class="name"><%= link_to c.username, "#" %></h5>
+				<span class="datetime">
+					<%= time_ago_in_words c.created_at %> ago
+				</span>
+			</div>
+			<%= c.content %>
+		</div>
+	</div>
+	<% end %>
+</div>
+<article class="reply clearfix">
+  <div class="avatar">
+    <%= link_to "#" do %>
+      <%= image_tag "3.jpg", class: "image-circle" %>
+    <% end %>
+  </div>
+  <div class="body">
+  <%= form_tag("/comments/#{@comment.id}/questions", method: :post) do  %>
+    <%= label_tag :username, "用户名" %>
+    <%= text_field_tag(:username) %>
+    <%= label_tag :content, "内容" %>
+    <%= text_area_tag(:content) %>
+    <%= submit_tag '回复', class: 'btn btn-primary btn-submit' %>
+  <% end %>
+  </div>
+</article>

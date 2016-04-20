@@ -1,0 +1,13 @@
+<% comments.each do |c| %>
+<li class="mui-table-view-cell mui-media">
+	<%= link_to comment_path(c) do %>
+		<img class="mui-media-object mui-pull-left" src="<%= image_url 'shuijiao.jpg' %>">
+		<div class="mui-media-body">
+		<%= c.username %>：<%= c.title %>
+			<p class='mui-ellipsis'>
+				<%= time_ago_in_words(c.created_at) %> ago
+			</p>
+		</div>
+	<% end %>
+</li>
+<% end %>

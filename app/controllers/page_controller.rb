@@ -1,5 +1,5 @@
 class PageController < ApplicationController
   def welcome
-  	@personal = Guest.all
+  	@personal = Guest.all.reverse
   end
 end

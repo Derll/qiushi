@@ -1,6 +1,6 @@
 <% personal.each do |i| %>
 	<li class="mui-table-view-cell mui-media">
-		<%= link_to "/detail" do %>
+		<%= link_to guest_path(i) do %>
 		<img class="mui-media-object mui-pull-left" src="<%= image_url 'shuijiao.jpg' %>">
 		<div class="mui-media-body">
 			<%= i.name %>

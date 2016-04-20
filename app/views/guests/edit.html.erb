@@ -1,0 +1,19 @@
+<header class="mui-bar mui-bar-nav">
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a>
+      <h1 class="mui-title">编辑内容</h1>
+</header>
+<div class="new-issue-form-container clearfix">
+  <div class="new-issue-form clearfix">
+    <%= form_for @guest do |f| %>
+      <dl class="form">
+        <dt><%= f.label "姓名" %></dt>
+        <dd><%= f.text_field :name %></dd>
+      </dl>
+      <dl class="form">
+        <dt><%= f.label "职称" %></dt>
+        <dd><%= f.text_area :title %></dd>
+      </dl>
+      <p><%= f.submit "编辑完毕", :class => "submit-issue-button btn btn-primary" %></p>
+    <% end %>
+  </div>
+</div>

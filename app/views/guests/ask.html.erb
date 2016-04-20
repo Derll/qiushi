@@ -1,0 +1,17 @@
+<header class="mui-bar mui-bar-nav">
+      <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back();"></a>
+      <h1 class="mui-title">我要建站</h1>
+</header>
+<div class="new-issue-form-container clearfix">
+  <div class="new-issue-form clearfix">
+    <%= form_tag("/guests/#{@guest.id}/comments", method: :post) do  %>
+    <%= label_tag :username, "用户名" %>
+    <%= text_field_tag(:username) %>
+    <%= label_tag :title, "问题名称" %>
+    <%= text_field_tag(:title) %>
+    <%= label_tag :content, "问题详情" %>
+    <%= text_area_tag(:content) %>
+    <%= submit_tag '提交评论', class: 'btn btn-primary btn-submit' %>
+  <% end %>
+  </div>
+</div>
