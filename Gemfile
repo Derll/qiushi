@@ -1,4 +1,5 @@
 source 'https://ruby.taobao.org/'
+gem 'json', '~>1.8.3'
 
 gem 'font-awesome-rails'
 gem 'jquery-atwho-rails'

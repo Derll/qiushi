@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: qiushi_production
-  username: qiushi
-  password: <%= ENV['QIUSHI_DATABASE_PASSWORD'] %>
+  username: root
+  password: 083013xd
