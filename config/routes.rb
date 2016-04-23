@@ -4,10 +4,10 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'page#welcome'
+ root 'page#welcome', :as => 'root'
 
   # guests
-  get 'guests/new' => 'guests#new'
+  get 'guests/new' => 'guests#new', :as => 'guests_new'
   get 'guests' => 'guests#index', :as => 'guests'
   get 'guests/:id' => 'guests#show', :as => 'guest'
   delete 'guests/:id' => 'guests#destroy'
